@@ -61,22 +61,22 @@ int a = 10;
 4.  dart
 
 ### how to declare a variable
-let a =10;
-var b = 10;
+    let a =10;
+    var b = 10;
 
 #### difference between let and var
 
-console.log('let vs var');
-
-function foo1(){
-
-  if(true){
-    c = 1; //global
-    var a = 100;  //function scope
-    let b = 200;  //block scope
-  }
-  console.log(a);
-}
+    console.log('let vs var');
+    
+    function foo1(){
+    
+      if(true){
+        c = 1; //global
+        var a = 100;  //function scope
+        let b = 200;  //block scope
+      }
+      console.log(a);
+    }
 
 
 
@@ -92,21 +92,21 @@ function foo1(){
 
 
 #### number
-let natural = 10;
-let decimal = 10.1;
-let hex = 0xa;
-let binary = 0b1010;
-let octal = 0o52;
-let fivLakhs = 5e5;
-console.log(natural, decimal, hex, binary, octal, fivLakhs);
-console.log(typeof natural, typeof decimal, typeof hex, typeof binary, typeof octal, typeof fivLakhs);
+    let natural = 10;
+    let decimal = 10.1;
+    let hex = 0xa;
+    let binary = 0b1010;
+    let octal = 0o52;
+    let fivLakhs = 5e5;
+    console.log(natural, decimal, hex, binary, octal, fivLakhs);
+    console.log(typeof natural, typeof decimal, typeof hex, typeof binary, typeof octal, typeof fivLakhs);
 
-//two special value of number Nan and Infinity
-let a = 10 * 'hello';
-console.log(a, typeof a);
+    //two special value of number Nan and Infinity
+    let a = 10 * 'hello';
+    console.log(a, typeof a);
 
-let b = 10 /0;
-console.log(b, typeof b);
+    let b = 10 /0;
+    console.log(b, typeof b);
 
 
 
