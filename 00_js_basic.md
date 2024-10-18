@@ -108,6 +108,194 @@ int a = 10;
     let b = 10 /0;
     console.log(b, typeof b);
 
+#### string
+    let sigleQuoteString = 'single quote';
+    let doubleQuoteString = "double quote";
+    let backTickString = `back tick `; 
+
+
+#### boolean
+    true and false are the two value of boolean
+    falsely value
+        let b = false;
+        b = 0;
+        b = "";  //'', ``
+        b= null;
+        b = undefined;
+        b = NaN;
+        b = 0n;
+
+        if (b) {
+        console.log("true");
+        } else {
+        console.log(b, "false");
+        }
+
+#### object type
+    //object
+    let person = {
+    name :'jack',
+    age : 20,
+    nationality : 'Indian'
+    };
+
+    console.log(person);
+    console.log(typeof person);
+
+    //access the properties
+    person.name = 'Ajay';  //dot notation
+    person['age'] = 25;    //bracket notation
+
+    console.log(person);
+
+    let math = {0 : 'zero', '+':'addition','-':'subtraction','*':'multiplication','/':'division'};
+    console.log(math);
+    //console.log(math.0); //cannot access above propterties with dot notation
+    console.log(math['0']);
+
+
+#### function
+    //function
+    function add(a, b) {
+    let c = a + b;
+    return c;
+    }
+
+    console.log(add);
+    console.log(typeof add);
+
+    let add1 = function (a, b) {
+    let c = a + b;
+    return c;
+    };
+
+    console.log(add1, typeof add1);
+
+    let add2 = (a, b) => a + b;
+    console.log(add2, typeof add2);
+
+    console.log(add(100, 200));
+    console.log(add1(100, 200));
+    console.log(add2(100, 200));
+
+--------------------------------------------------
+    console.log(add(100, 200));  //this will work
+    console.log(add1(100, 200));  //this will not work
+
+    function add(a, b) {
+    let c = a + b;
+    return c;
+    }
+
+
+    let add1 = function (a, b) {
+    let c = a + b;
+    return c;
+    };
+
+#### undefined
+    let a;
+    let person = {name:'jack'};
+    console.log(a, typeof a); // undefined, 'undefined'
+    console.log(person.age);  //undefined
+    let person1 = null;
+    console.log(person1, typeof person1); //null object
+    console.log(typeof null);  // object
+
+#### bigints
+    let a = 123456789123456789n;
+    console.log(a, typeof a);
+
+#### symbol
+    symbol are used for ensuring uniquness
+    let a = Symbol(10);
+    let b = Symbol(10);
+    console.log(a, typeof a);
+    console.log(b, typeof b);
+    console.log(a == b);
+
+
+-----------------------------------------------------------------------------------
+#### important features
+##### equality
+ 1. ==  check equality of value
+ 2. === check equality of value and type
+
+    let a = 10;
+    let b = '10';
+    console.log(a === Number(b));
+    console.log(typeof a, typeof Number(b));
+
+##### arrays
+    Arrays are objects
+    let arr = [1, 2, 3, 4];
+    console.log(arr, typeof arr);  //[ 1, 2, 3, 4 ] object
+
+    arr[2] = 100;
+    console.log(arr); //[ 1, 2, 100, 4 ]
+
+    //built in method
+    arr.push(10);
+    console.log(arr); //[ 1, 2, 100, 4 , 10]
+
+    let x = arr.pop();
+    console.log(x, arr);  //x= 10,   arr= [ 1, 2, 100, 4 ]
+
+    console.log(arr.indexOf(1000));  //-1
+
+
+
+    let barr = arr.filter(function (item) {
+    return item % 2 === 0;
+    });
+
+    let carr = arr.filter((x) => x % 2 === 0);
+    let darr = carr.map(x => x * x);
+
+    console.log(darr);
+
+
+###### splice function
+
+    array.splice(
+        startingIndex,
+        removeHowManyElement,
+        ... element to be added
+    );
+
+    array.splice(2,3,4,5);
+    starting index = 2
+    NumberOfElementTobeRemoved =3
+    elementTobeAdded =4,5
+
+
+##### spread operator
+    . combine the objects and array
+    . passing function argument to the function
+
+
+    let person = {name: 'jack', age:22};
+    let emp = {id:101, salary:2000};
+
+    let empAsPerson = {...emp, ...person};
+    console.log(empAsPerson);
+
+
+    let arr = [1,2,3];
+    let barr = [10,20,30];
+    let carr = [...arr, 111, ...barr];
+    console.log(carr);
+
+    function add(num1, num2,num3){
+        let rs =  num1 + num2 + num3;
+        console.log('sum= '+rs);
+    }
+
+    add(arr[0], arr[1], arr[2]);
+    add(...arr);
+
+##### Object Destructuring
+
 
 
 
